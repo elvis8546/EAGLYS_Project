@@ -1,3 +1,4 @@
-import SQLparseACT
+from sqlParse import sqlParse
 
-print('a')
+if __name__ == '__main__':
+    sqlParse()
