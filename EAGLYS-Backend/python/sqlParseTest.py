@@ -1,5 +1,8 @@
 import sqlparse
 
+#From sqlparse github
+
+
 def sqlParse():
     # Split a string containing two SQL statements:
     raw = 'select * from foo; select * from bar;'
@@ -7,7 +10,7 @@ def sqlParse():
 
 
     # Format the first statement and print it out:
-    first = statements[0]
+    first = statements[1]
     print(sqlparse.format(first, reindent=True, keyword_case='upper'))
 
     # Parsing a SQL statement:
