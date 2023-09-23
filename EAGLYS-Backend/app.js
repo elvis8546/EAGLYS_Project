@@ -2,12 +2,15 @@ const http = require('http');
 const { exec } = require('child_process');
 const express = require('express');
 const cors = require('cors'); // impoort cors module
+const corsOptions = {
+  origin: '*', // 允许的来源（你的前端应用的地址）
+  methods: 'POST', // 允许的 HTTP 方法
+  allowedHeaders: ['Content-Type'], // 允许的头部
+};
+
 
 const app = express();
-app.use(cors({
-  origin: 'http://localhost:3000', // 允许来自该域的请求
-  allowedHeaders: ['Content-Type', 'Authorization'], // 允许的请求头
-}));
+app.use(cors(corsOptions));
 const PORT = process.env.PORT || 4000;
 
 const server = http.createServer((req, res) => {

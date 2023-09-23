@@ -50,7 +50,7 @@
         };
   
         // 使用 Axios 发送 POST 请求到 localhost:4000
-        axios.post('http://localhost:4000/query', data, {
+        axios.post('http://192.168.199.1:4000/query', data, {
           headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': 'http://localhost:3000', // 指定允许的前端源
