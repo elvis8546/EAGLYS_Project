@@ -485,7 +485,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/mainPage-1e22de28.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/mainPage-24a5af6a.js").then((m) => m.default || m)
   },
   {
     name: "testPage",
@@ -493,7 +493,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/testPage-ec3d1a94.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/testPage-c1dc7f5e.js").then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {

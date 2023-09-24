@@ -1,8 +1,8 @@
-import axios from 'axios';
-import { resolveComponent, withCtx, createVNode, withModifiers, withDirectives, vModelText, useSSRContext, mergeProps } from 'vue';
-import { ssrRenderComponent, ssrRenderStyle, ssrRenderAttr, ssrRenderAttrs } from 'vue/server-renderer';
-import { _ as _export_sfc } from '../server.mjs';
-
+import axios from "axios";
+import { resolveComponent, withCtx, createVNode, withModifiers, withDirectives, vModelText, useSSRContext, mergeProps } from "vue";
+import { ssrRenderComponent, ssrRenderStyle, ssrRenderAttr, ssrRenderAttrs } from "vue/server-renderer";
+import { _ as _export_sfc } from "../server.mjs";
+const sqlParseAst_vue_vue_type_style_index_0_lang = "";
 const _sfc_main$2 = {
   data() {
     return {
@@ -18,10 +18,11 @@ const _sfc_main$2 = {
         sqlQuery2: this.sqlQuery2,
         sqlQuery3: this.sqlQuery3
       };
-      axios.post("http://localhost:4000/query", data).then((response) => {
-        console.log("\u670D\u52A1\u5668\u54CD\u5E94\uFF1A", response.data);
-      }).catch((error) => {
-        console.error("\u8BF7\u6C42\u9519\u8BEF\uFF1A", error);
+      axios.post("http://192.168.199.1:4000/query", data, {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "http://localhost:3000"
+        }
       });
     }
   }
@@ -180,8 +181,26 @@ _sfc_main$2.setup = (props, ctx) => {
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
 const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$2]]);
+const unitTest_vue_vue_type_style_index_0_lang = "";
 const _sfc_main$1 = {
-  components: {}
+  data() {
+    return {
+      sqlQuery4: ""
+    };
+  },
+  methods: {
+    handleSubmit() {
+      const data = {
+        sqlQuery4: this.sqlQuery4
+      };
+      axios.post("http://192.168.199.1:4000/query", data, {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "http://localhost:3000"
+        }
+      });
+    }
+  }
 };
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_v_app = resolveComponent("v-app");
@@ -199,7 +218,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
             if (_push3) {
               _push3(`<div class="" style="${ssrRenderStyle({ "height": "100%" })}"${_scopeId2}>`);
               _push3(ssrRenderComponent(_component_Nuxt, { style: { "overflow-y": "scroll" } }, null, _parent3, _scopeId2));
-              _push3(`<div class="title"${_scopeId2}> Unit Test </div><div class="title"${_scopeId2}> 4th : Unit Test </div><input class="sqlInput" type="text" id="4th" name="ut" size="10"${_scopeId2}><br${_scopeId2}><input style="${ssrRenderStyle({ "margin-top": "10px", "margin-left": "10px" })}" type="submit"${_scopeId2}></div><div id="outputArea"${_scopeId2}><div class="title"${_scopeId2}> Output : </div><div id="output"${_scopeId2}></div></div>`);
+              _push3(`<div class="title"${_scopeId2}> Unit Test </div><form${_scopeId2}><div class="title"${_scopeId2}>4th : Unit Test</div><input${ssrRenderAttr("value", $data.sqlQuery4)} class="sqlInput" type="text" id="4th" name="ut" size="10"${_scopeId2}><br${_scopeId2}><input style="${ssrRenderStyle({ "margin-top": "10px", "margin-left": "10px" })}" type="submit"${_scopeId2}></form></div><div id="outputArea"${_scopeId2}><div class="title"${_scopeId2}> Output : </div><div id="output"${_scopeId2}></div></div>`);
             } else {
               return [
                 createVNode("div", {
@@ -208,19 +227,26 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
                 }, [
                   createVNode(_component_Nuxt, { style: { "overflow-y": "scroll" } }),
                   createVNode("div", { class: "title" }, " Unit Test "),
-                  createVNode("div", { class: "title" }, " 4th : Unit Test "),
-                  createVNode("input", {
-                    class: "sqlInput",
-                    type: "text",
-                    id: "4th",
-                    name: "ut",
-                    size: "10"
-                  }),
-                  createVNode("br"),
-                  createVNode("input", {
-                    style: { "margin-top": "10px", "margin-left": "10px" },
-                    type: "submit"
-                  })
+                  createVNode("form", {
+                    onSubmit: withModifiers($options.handleSubmit, ["prevent"])
+                  }, [
+                    createVNode("div", { class: "title" }, "4th : Unit Test"),
+                    withDirectives(createVNode("input", {
+                      "onUpdate:modelValue": ($event) => $data.sqlQuery4 = $event,
+                      class: "sqlInput",
+                      type: "text",
+                      id: "4th",
+                      name: "ut",
+                      size: "10"
+                    }, null, 8, ["onUpdate:modelValue"]), [
+                      [vModelText, $data.sqlQuery4]
+                    ]),
+                    createVNode("br"),
+                    createVNode("input", {
+                      style: { "margin-top": "10px", "margin-left": "10px" },
+                      type: "submit"
+                    })
+                  ], 40, ["onSubmit"])
                 ]),
                 createVNode("div", { id: "outputArea" }, [
                   createVNode("div", { class: "title" }, " Output : "),
@@ -245,19 +271,26 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
               }, [
                 createVNode(_component_Nuxt, { style: { "overflow-y": "scroll" } }),
                 createVNode("div", { class: "title" }, " Unit Test "),
-                createVNode("div", { class: "title" }, " 4th : Unit Test "),
-                createVNode("input", {
-                  class: "sqlInput",
-                  type: "text",
-                  id: "4th",
-                  name: "ut",
-                  size: "10"
-                }),
-                createVNode("br"),
-                createVNode("input", {
-                  style: { "margin-top": "10px", "margin-left": "10px" },
-                  type: "submit"
-                })
+                createVNode("form", {
+                  onSubmit: withModifiers($options.handleSubmit, ["prevent"])
+                }, [
+                  createVNode("div", { class: "title" }, "4th : Unit Test"),
+                  withDirectives(createVNode("input", {
+                    "onUpdate:modelValue": ($event) => $data.sqlQuery4 = $event,
+                    class: "sqlInput",
+                    type: "text",
+                    id: "4th",
+                    name: "ut",
+                    size: "10"
+                  }, null, 8, ["onUpdate:modelValue"]), [
+                    [vModelText, $data.sqlQuery4]
+                  ]),
+                  createVNode("br"),
+                  createVNode("input", {
+                    style: { "margin-top": "10px", "margin-left": "10px" },
+                    type: "submit"
+                  })
+                ], 40, ["onSubmit"])
               ]),
               createVNode("div", { id: "outputArea" }, [
                 createVNode("div", { class: "title" }, " Output : "),
@@ -295,6 +328,9 @@ _sfc_main.setup = (props, ctx) => {
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const navBar = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
-
-export { __nuxt_component_0 as _, __nuxt_component_1 as a, navBar as n };
-//# sourceMappingURL=navigatorBar-fab216c6.mjs.map
+export {
+  __nuxt_component_0 as _,
+  __nuxt_component_1 as a,
+  navBar as n
+};
+//# sourceMappingURL=navigatorBar-1e7cef0e.js.map

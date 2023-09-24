@@ -30,7 +30,7 @@
   </template>
   
   <script>
-  import axios from 'axios'; // 导入 Axios 库
+  import axios from 'axios'; 
   
   export default {
     data() {
@@ -42,18 +42,17 @@
     },
     methods: {
       handleSubmit() {
-        // 构造要发送的数据
         const data = {
           sqlQuery1: this.sqlQuery1,
           sqlQuery2: this.sqlQuery2,
           sqlQuery3: this.sqlQuery3,
         };
   
-        // 使用 Axios 发送 POST 请求到 localhost:4000
+        // use Axios send POST
         axios.post('http://192.168.199.1:4000/query', data, {
           headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'http://localhost:3000', // 指定允许的前端源
+            'Access-Control-Allow-Origin': 'http://localhost:3000', 
           },
         })
       },

@@ -6,12 +6,12 @@
         <div class="title">
           Unit Test
         </div>
-        <div class="title">
-          4th : Unit Test
-        </div>
-        <input class="sqlInput" type="text" id="4th" name="ut" size="10" />
+        <form @submit.prevent="handleSubmit">
+         <div class="title">4th : Unit Test</div>
+        <input v-model="sqlQuery4" class="sqlInput" type="text" id="4th" name="ut" size="10" />
         <br>
         <input style="margin-top:10px;margin-left: 10px;" type="submit" />  
+         </form>
       </div>
       <div id="outputArea">
         <div class="title">
@@ -25,9 +25,28 @@
   </template>
   
   <script>
+  import axios from 'axios'; 
+  
   export default {
-    components: {
-      
+    data() {
+      return {
+        sqlQuery4: '',
+      };
+    },
+    methods: {
+      handleSubmit() {
+        const data = {
+          sqlQuery4: this.sqlQuery4,
+        };
+  
+        // use Axios send POST
+        axios.post('http://192.168.199.1:4000/query', data, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'http://localhost:3000', 
+          },
+        })
+      },
     },
   };
   </script>
