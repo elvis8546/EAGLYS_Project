@@ -1,5 +1,5 @@
 {
-  "_navigatorBar.3ef1583c.js": {
+  "_navigatorBar.ca126134.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -7,7 +7,7 @@
     "css": [
       "navigatorBar.365d6a26.css"
     ],
-    "file": "navigatorBar.3ef1583c.js",
+    "file": "navigatorBar.ca126134.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -18,12 +18,12 @@
     "prefetch": true,
     "preload": true
   },
-  "_vue.f36acd1f.0804ce0e.js": {
+  "_vue.f36acd1f.14f118e3.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "vue.f36acd1f.0804ce0e.js",
+    "file": "vue.f36acd1f.14f118e3.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -55,10 +55,10 @@
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-404.65e59c94.js",
+    "file": "error-404.41768df9.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_vue.f36acd1f.0804ce0e.js"
+      "_vue.f36acd1f.14f118e3.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue"
@@ -82,9 +82,9 @@
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-500.cde87c76.js",
+    "file": "error-500.1425b220.js",
     "imports": [
-      "_vue.f36acd1f.0804ce0e.js",
+      "_vue.f36acd1f.14f118e3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -105,7 +105,7 @@
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.be013cd2.js",
+    "file": "entry.5bdf5548.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -126,7 +126,7 @@
       "logo.03d6d6da.png"
     ],
     "css": [],
-    "file": "App.1473ea5e.js",
+    "file": "App.1ef84f2d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -158,9 +158,9 @@
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "mainPage.d7c62ced.js",
+    "file": "mainPage.48bc5ceb.js",
     "imports": [
-      "_navigatorBar.3ef1583c.js",
+      "_navigatorBar.ca126134.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -185,9 +185,9 @@
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "testPage.e21a1f87.js",
+    "file": "testPage.f386f404.js",
     "imports": [
-      "_navigatorBar.3ef1583c.js",
+      "_navigatorBar.ca126134.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,

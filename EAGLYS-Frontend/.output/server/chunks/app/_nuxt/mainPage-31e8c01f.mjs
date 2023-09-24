@@ -1,22 +1,25 @@
-import { n as navBar, _ as __nuxt_component_0, a as __nuxt_component_1 } from "./navigatorBar-1e7cef0e.js";
-import { resolveComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, createCommentVNode, useSSRContext } from "vue";
-import { ssrRenderComponent, ssrRenderStyle } from "vue/server-renderer";
-import { _ as _export_sfc } from "../server.mjs";
-import "axios";
-import "ofetch";
-import "#internal/nitro";
-import "hookable";
-import "unctx";
-import "destr";
-import "devalue";
-import "klona";
-import "unhead";
-import "@unhead/shared";
-import "vue-router";
-import "h3";
-import "ufo";
-import "defu";
-const mainPage_vue_vue_type_style_index_0_lang = "";
+import { n as navBar, _ as __nuxt_component_0, a as __nuxt_component_1 } from './navigatorBar-f189f478.mjs';
+import { resolveComponent, mergeProps, withCtx, createVNode, openBlock, createBlock, createCommentVNode, useSSRContext } from 'vue';
+import { ssrRenderComponent, ssrRenderStyle } from 'vue/server-renderer';
+import { _ as _export_sfc } from '../server.mjs';
+import 'axios';
+import '../../nitro/node-server.mjs';
+import 'node:http';
+import 'node:https';
+import 'node:zlib';
+import 'node:stream';
+import 'node:buffer';
+import 'node:util';
+import 'node:url';
+import 'node:net';
+import 'node:fs';
+import 'node:path';
+import 'fs';
+import 'path';
+import 'unhead';
+import '@unhead/shared';
+import 'vue-router';
+
 const _sfc_main = {
   components: {
     "navBar": navBar,
@@ -146,7 +149,6 @@ _sfc_main.setup = (props, ctx) => {
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const mainPage = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
-export {
-  mainPage as default
-};
-//# sourceMappingURL=mainPage-24a5af6a.js.map
+
+export { mainPage as default };
+//# sourceMappingURL=mainPage-31e8c01f.mjs.map

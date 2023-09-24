@@ -49,7 +49,7 @@
         };
   
         // use Axios send POST
-        axios.post('http://192.168.199.1:4000/query', data, {
+        axios.post('http://192.168.254.130:4000/query', data, {
           headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': 'http://localhost:3000', 

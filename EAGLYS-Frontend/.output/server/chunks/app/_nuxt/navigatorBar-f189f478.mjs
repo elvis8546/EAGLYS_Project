@@ -18,7 +18,7 @@ const _sfc_main$2 = {
         sqlQuery2: this.sqlQuery2,
         sqlQuery3: this.sqlQuery3
       };
-      axios.post("http://192.168.199.1:4000/query", data, {
+      axios.post("http://192.168.254.130:4000/query", data, {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "http://localhost:3000"
@@ -192,7 +192,7 @@ const _sfc_main$1 = {
       const data = {
         sqlQuery4: this.sqlQuery4
       };
-      axios.post("http://192.168.199.1:4000/query", data, {
+      axios.post("http://192.168.254.130:4000/query", data, {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "http://localhost:3000"
@@ -329,4 +329,4 @@ _sfc_main.setup = (props, ctx) => {
 const navBar = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { __nuxt_component_0 as _, __nuxt_component_1 as a, navBar as n };
-//# sourceMappingURL=navigatorBar-1e7cef0e.mjs.map
+//# sourceMappingURL=navigatorBar-f189f478.mjs.map

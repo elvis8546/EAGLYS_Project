@@ -1,0 +1,15 @@
+# Node.js as basic image
+FROM node:18
+
+WORKDIR /app
+
+COPY . .
+
+# install dependencies
+RUN npm install
+
+# build Nuxt.js application
+RUN npm run build
+
+# start application
+CMD ["npm", "start"]
